@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <meta http-equiv="refresh" content ="600" /> -->
+    <title>Document</title>
+
+    <style type="text/css">
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        body{
+            /* background-image: url(./img/2.jpg); */
+            background-color: rgb(255, 223, 228);
+        }
+        #head{
+            position: relative;
+            width: 100%;
+            height: 100px;
+            /* background-color: pink; */
+        }
+        #headword{
+            font-family: DFKai-sb;
+            font-size: 36px;
+            /* color: royalblue; */
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+        }
+        #body{
+            position: relative;
+            width: 100%;
+            height: 500px;
+            /* background-color: rebeccapurple; */
+        }
+        #leftdiv{
+            position: relative;
+            float: left;
+            left: 0;
+            width: 70%;
+            height: 500px;
+            /* background-color: seagreen; */
+        }
+        #calendartable{
+            position: absolute;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            text-align: center;
+            width: 90%;
+            border: 1px solid black;
+        }
+        #calendarword{
+            font-family: DFKai-sb;
+            font-size: 24px;
+            border: 1px solid black;
+        }
+        #rightdiv{
+            position: relative;
+            float: right;
+            right: 0;
+            width: 30%;
+            height: 500px;
+            /* background-color: silver; */
+        }
+        #nowtimetittle{
+            font-family: DFKai-sb;
+            font-size: 36px;
+            /* font-weight: bold; */
+            color: black;
+            text-align: center;
+        }
+        #demo{
+            font-family: cursive;
+            font-size: 24px;
+        }
+    </style>
+    
+    <script type="text/javascript"> 
+        document.getElementById("h").innerHTML= "Hello World!";document.getElementById("demo").innerHTML = Date();
+    </script>
+</head>
+<body>
+    <div id="head">
+        <p id="headword">萬年曆</p>
+    </div>
+    <div id="body">
+        <div id="leftdiv">
+            <div id="calendar">
+                <table id="calendartable">
+                    <br/>
+                    <br/>
+                    <br/>
+                    <br/>
+                    <tr>
+                        <td id="calendarword">日</td>
+                        <td id="calendarword">一</td>
+                        <td id="calendarword">二</td>
+                        <td id="calendarword">三</td>
+                        <td id="calendarword">四</td>
+                        <td id="calendarword">五</td>
+                        <td id="calendarword">六</td>
+                    </tr>
+                    <tr>
+                        <td id="calendarword"></td>
+                        <td id="calendarword"></td>
+                        <td id="calendarword"></td>
+                        <td id="calendarword"></td>
+                        <td id="calendarword"></td>
+                        <td id="calendarword"></td>
+                        <td id="calendarword"></td>
+                    </tr>
+                    <tr>
+                        <td id="calendarword"></td>
+                        <td id="calendarword"></td>
+                        <td id="calendarword"></td>
+                        <td id="calendarword"></td>
+                        <td id="calendarword"></td>
+                        <td id="calendarword"></td>
+                        <td id="calendarword"></td>
+                    </tr>
+                    <tr>
+                        <td id="calendarword"></td>
+                        <td id="calendarword"></td>
+                        <td id="calendarword"></td>
+                        <td id="calendarword"></td>
+                        <td id="calendarword"></td>
+                        <td id="calendarword"></td>
+                        <td id="calendarword"></td>
+                    </tr>
+                    <tr>
+                        <td id="calendarword"></td>
+                        <td id="calendarword"></td>
+                        <td id="calendarword"></td>
+                        <td id="calendarword"></td>
+                        <td id="calendarword"></td>
+                        <td id="calendarword"></td>
+                        <td id="calendarword"></td>
+                    </tr>
+                    <tr>
+                        <td id="calendarword"></td>
+                        <td id="calendarword"></td>
+                        <td id="calendarword"></td>
+                        <td id="calendarword"></td>
+                        <td id="calendarword"></td>
+                        <td id="calendarword"></td>
+                        <td id="calendarword"></td>
+                    </tr>
+                    <tr>
+                        <td id="calendarword"></td>
+                        <td id="calendarword"></td>
+                        <td id="calendarword"></td>
+                        <td id="calendarword"></td>
+                        <td id="calendarword"></td>
+                        <td id="calendarword"></td>
+                        <td id="calendarword"></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <div id="rightdiv">
+            <div id="nowtime">
+                <br/>
+                <p id="nowtimetittle">現在的時間</p><br/>
+                <br/>
+                <p id="demo"></p>
+                <script type="text/javascript"> 
+                    var time = setInterval(function() {
+                        // var t = new Date();
+                        // var th = t.getHours("lj"),
+                        //     tm = t.getMinutes(),
+                        //     ts = t.getSeconds();
+                        // if (th<10){
+                        //     th = "0"+th;
+                        // }
+                        document.getElementById("demo").innerHTML = new Date();
+                    }, 1000);
+                </script>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
